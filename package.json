@@ -1,0 +1,39 @@
+{
+  "name": "tlon-appium",
+  "version": "1.0.0",
+  "description": "e2e tests for tlon mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serenity": "failsafe serenity:update serenity:clean wdio serenity:report",
+    "serenity:update": "serenity-bdd update",
+    "serenity:clean": "rimraf target",
+    "wdio": "wdio run ./wdio.conf.js",
+    "serenity:report": "serenity-bdd run"
+  },
+  "author": "Mariano Rozanski",
+  "license": "ISC",
+  "dependencies": {
+    "webdriverio": "^8.20.4"
+  },
+  "devDependencies": {
+    "@serenity-js/assertions": "^3.13.0",
+    "@serenity-js/console-reporter": "^3.13.0",
+    "@serenity-js/core": "^3.13.0",
+    "@serenity-js/mocha": "^3.13.0",
+    "@serenity-js/rest": "^3.13.0",
+    "@serenity-js/serenity-bdd": "^3.13.0",
+    "@serenity-js/web": "^3.13.0",
+    "@serenity-js/webdriverio": "^3.13.0",
+    "@wdio/appium-service": "^8.20.4",
+    "@wdio/cli": "^8.20.5",
+    "@wdio/local-runner": "^8.20.5",
+    "@wdio/spec-reporter": "^8.20.0",
+    "appium-chromium-driver": "^1.2.26",
+    "appium-uiautomator2-driver": "^2.33.1",
+    "mocha": "^10.2.0",
+    "npm-failsafe": "^1.2.0",
+    "rimraf": "^5.0.5",
+    "wdio-wait-for": "^3.0.7"
+  }
+}
