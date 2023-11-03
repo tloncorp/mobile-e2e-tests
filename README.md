@@ -1,9 +1,10 @@
 # Tlon Mobile Automation testing
 
 This repository is POC status.
+
 As of 11/03/2023 it runs locally with a mobile device connected or a simulator.
 
-If the inititive gets traction, the code here would be plugged into a cloud solution such as Saucelabs or Browserstack and run by CI/CD actions.
+If this inititive gets traction, the code here would be plugged into a cloud solution such as Saucelabs or Browserstack and run by CI/CD actions.
 
 ## Local
 
@@ -15,7 +16,7 @@ If the inititive gets traction, the code here would be plugged into a cloud solu
 
 ### Android
 
-1. Connect device via USB and ensure it is in development mode.
+1. Connect device via USB and ensure it is in developer / debugging mode.
 
 Ensure `adb` is available and check for devices:
 
@@ -28,13 +29,15 @@ List of devices attached
 1122AAABB	device
 ```
 
+https://developer.android.com/studio/debug/dev-options
+
 For the sample test (join group) the device is expected to have the tlon app installed and authenticated.
 
 11/03/2023 Note:
 
-The group is hardcoded in the test. After running, please reject the invite manually before running the test agaibn.
+The group is hardcoded in the test. After running, please reject the invite manually before running the test again.
 
-To do: add accessibilioty IDs or HTML IDs to elements to be targeted by WebdriverIO. Right now the xpath selectorsare not robust and "text="Reject Invite" is reused.
+To do: add accessibility IDs or HTML IDs to elements to be targeted by WebdriverIO. Right now the xpath selectors are not robust and "text="Reject Invite" is reused in the activity screen and in the confirmation dialog.
 
 2. Start appium server in a separate terminal window
 
@@ -47,4 +50,3 @@ To do: add accessibilioty IDs or HTML IDs to elements to be targeted by Webdrive
 ## References
 
 [Quickstart Intro - Appium Documentation](https://appium.io/docs/en/2.1/quickstart/)
-(node v19.3.0)
